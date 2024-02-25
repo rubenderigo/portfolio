@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "February 2022 - Current",
+    title: "Web Developer - Cinetica Tech",
+    description:
+      "Currently, I'm creating new modules for a CRM product designed for a Belgian company. I work closely with clients from different countries and diverse teams, contributing to the global growth of our projects.",
+  },
+  {
+    date: "December 2021",
+    title: "Web Developer - Painted Birds",
+    description:
+      "I specialized in creating custom software and frontend development for a variety of web projects. I collaborated with clients to implement the features they required, delivering customized solutions for different industries",
+  },
+  {
+    date: "August 2020",
+    title: "Android Developer Internship - CodigoDelSur",
+    description:
+      "My experience here had a more educational focus, where I received an intensive training in Android Development and then took part in internal projects, making small contributions.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
