@@ -3,13 +3,13 @@ import Badge from "../components/Badge.astro";
 import photoImage from "../assets/photo.jpg";
 import LinkeInIcon from "./icons/LinkeIn.astro";
 import GitHubIcon from "./icons/GitHub.astro";
-import SocialPill from "./icons/SocialPill.astro";
+import SocialPill from "./SocialPill.astro";
 import GitLabIcon from "./icons/GitLab.astro";
 import MailIcon from "./icons/Mail.astro";
 ---
 
 <img src={photoImage.src} alt="Ruben Derigo photo" class="size-12 rounded-full mb-4" />
-<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 text-pretty">
   Hey, I'm Ruben Derigo
   <a
     href="https://linkedin.com/in/ruben-derigo"
@@ -20,28 +20,29 @@ import MailIcon from "./icons/Mail.astro";
     <Badge>Available for hire</Badge>
   </a>
 </h1>
-<h2 class="text-2xl text-wrap">
-  <span>+3 years experience.</span><span class="text-yellow-200/90"> Full-Stack Web Developer</span> from Montevideo, Uruguay
-  🧉UY. Specialized in creating practical and customized solutions.
-</h2>
-<nav class="flex gap-x-3 mt-8">
+<span class="text-xl lg:text-2xl max-w-[700px]">
+  I'm 20 years old with over 4 years of professional experience.
+  <span class="text-yellow-200/90"> Full-Stack Web Developer</span>
+  from Montevideo, Uruguay 🧉UY. Specialized in creating practical and customized solutions.
+</span>
+<nav class="flex gap-4 mt-8 flex-wrap">
   <SocialPill href="https://linkedin.com/in/ruben-derigo">
-    <LinkeInIcon class="size-6 flex" />
+    <LinkeInIcon class="size-4 lg:size-5" />
     LinkedIn
   </SocialPill>
 
   <SocialPill href="https://gitlab.efficy.cloud/rubenderigo">
-    <GitLabIcon class="size-6" />
+    <GitLabIcon class="size-3 lg:size-5" />
     GitLab
   </SocialPill>
 
   <SocialPill href="https://github.com/rubenderigo">
-    <GitHubIcon class="size-6" />
+    <GitHubIcon class="size-3 lg:size-5" />
     GitHub
   </SocialPill>
 
   <SocialPill href="mailto:rm.derigo@gmail.com">
-    <MailIcon class="size-6" />
+    <MailIcon class="size-3 lg:size-5" />
     rm.derigo@gmail.com
   </SocialPill>
 </nav>
