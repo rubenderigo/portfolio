@@ -3,7 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Home from "../components/Home.astro";
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
 ---
 
 <Layout
@@ -11,15 +13,22 @@ import Briefcase from "../components/icons/Briefcase.astro";
   description="Hire Ruben Deriog to create your application. Web Developer. Specialized in creating web solutions."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-24">
+    <SectionContainer class="py-44 pb-32">
       <Home />
     </SectionContainer>
     <SectionContainer id="experience">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
         <Briefcase class="size-7" />
         Work Experience
       </h2>
       <Experience />
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <CodeIcon class="size-7" />
+        Projects
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
