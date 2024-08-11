@@ -1,48 +1,39 @@
 ---
 import Badge from "../components/Badge.astro";
 import photoImage from "../assets/photo.jpg";
-import LinkeInIcon from "./icons/LinkeIn.astro";
-import GitHubIcon from "./icons/GitHub.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
 import SocialPill from "./SocialPill.astro";
-import GitLabIcon from "./icons/GitLab.astro";
 import MailIcon from "./icons/Mail.astro";
+
+const personalImageAlt = "Ruben Derigo";
 ---
 
-<img src={photoImage.src} alt="Ruben Derigo photo" class="size-12 rounded-full mb-4" />
-<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 text-pretty">
-  Hey, I'm Ruben Derigo
-  <a
-    href="https://linkedin.com/in/ruben-derigo"
-    target="_blank"
-    rel="noopener"
-    class="flex justify-center items-center"
-  >
-    <Badge>Available for hire</Badge>
-  </a>
-</h1>
-<span class="text-xl lg:text-2xl max-w-[700px]">
-  I'm 20 years old with over 4 years of professional experience.
-  <span class="text-yellow-200/90"> Full-Stack Web Developer</span>
-  from Montevideo, Uruguay 🧉UY. Specialized in creating practical and customized solutions.
-</span>
-<nav class="flex gap-4 mt-8 flex-wrap">
-  <SocialPill href="https://linkedin.com/in/ruben-derigo">
-    <LinkeInIcon class="size-4 lg:size-5" />
-    LinkedIn
-  </SocialPill>
-
-  <SocialPill href="https://gitlab.efficy.cloud/rubenderigo">
-    <GitLabIcon class="size-3 lg:size-5" />
-    GitLab
-  </SocialPill>
-
-  <SocialPill href="https://github.com/rubenderigo">
-    <GitHubIcon class="size-3 lg:size-5" />
-    GitHub
-  </SocialPill>
-
-  <SocialPill href="mailto:rm.derigo@gmail.com">
-    <MailIcon class="size-3 lg:size-5" />
-    rm.derigo@gmail.com
-  </SocialPill>
-</nav>
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img class="rounded-full shadow-lg size-16" src={photoImage.src} alt={personalImageAlt} />
+    <a
+      href="https://linkedin.com/in/ruben-derigo"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1 class="text-4xl font-bold tracking-tight sm:text-5xl text-white">Hey, soy Ruben Derigo</h1>
+  <p class="mt-6 text-xl [&>strong]:text-yellow-200 [&>strong]:font-semibold text-gray-300">
+    Con +4 años de experiencia como <strong>desarrollador JavaScript</strong>, soy un apasionado de la creación de
+    aplicaciones web únicas. Desde Montevideo, Uruguay 🧉, combino mi formación universitaria con habilidades técnicas
+    para ofrecer soluciones innovadoras y personalizadas."
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:rm.derigo@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://linkedin.com/in/ruben-derigo">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </nav>
+</div>
